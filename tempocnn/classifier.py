@@ -6,7 +6,10 @@ from pathlib import Path
 from urllib.error import HTTPError
 
 import numpy as np
-from tensorflow.python.keras.models import load_model
+# from tensorflow.python.keras.models import load_model
+import tensorflow.compat.v1 as tf
+from tensorflow.compat.v1.keras.models import load_model
+tf.disable_v2_behavior()
 
 logger = logging.getLogger('tempocnn.classifier')
 
